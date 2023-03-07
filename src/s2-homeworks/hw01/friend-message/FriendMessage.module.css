@@ -24,11 +24,6 @@
 
 }
 
-.friendText::after {
-
-
-}
-
 .friendText:after {
     content: '';
     position: absolute;
@@ -53,17 +48,6 @@
     font-size: 16px;
     line-height: 20px;
 }
-
-/*.angle {*/
-/*    position: absolute;*/
-/*    left: -10px;*/
-/*    bottom: 0;*/
-/*    width: 10px;*/
-/*    height: 10px;*/
-/*    background-color: #F5F7FB;*/
-/*  */
-
-/*}*/
 
 .friendTime {
     font-family: 'Montserrat';

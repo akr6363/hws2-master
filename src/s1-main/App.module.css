@@ -10,6 +10,7 @@
     flex-direction: column;
 }
 
+
 .hwTitle {
     font-family: 'Montserrat';
     font-weight: 600;
@@ -25,8 +26,3 @@
     padding-bottom: 34px;
 }
 
-.hw_wrap {
-    display: flex;
-    flex-direction: column;
-
-}
