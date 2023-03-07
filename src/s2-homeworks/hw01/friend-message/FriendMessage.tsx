@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './FriendMessage.module.css'
 import {MessagePropsType} from "../message/Message";
+import s2 from "../../../s1-main/App.module.css";
 
 // создать тип вместо any и отобразить приходящие данные
 const FriendMessage = (props: MessagePropsType) => {
@@ -15,6 +16,7 @@ const FriendMessage = (props: MessagePropsType) => {
                     //
                 />
                 <div className={s.friendText}>
+                    {/*<div className={s.angle}></div>*/}
                     <div
                         id={'hw1-friend-name-' + props.message.id}
                         className={s.friendName}
