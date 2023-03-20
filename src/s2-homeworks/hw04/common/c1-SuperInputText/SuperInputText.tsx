@@ -7,6 +7,8 @@ import React, {
 } from 'react'
 import s from './SuperInputText.module.css'
 
+
+
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement>
@@ -20,6 +22,7 @@ type SuperInputTextPropsType = Omit<DefaultInputPropsType, 'type'> & {
     error?: ReactNode
     spanClassName?: string
 }
+
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
     {
