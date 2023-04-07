@@ -2,10 +2,12 @@
 }
 
 .span {
+    color: #0080FF
 }
 
 .input {
 }
 
 .pen {
+    margin-right: 10px;
 }
