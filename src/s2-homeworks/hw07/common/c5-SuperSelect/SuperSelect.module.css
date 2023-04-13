@@ -1,7 +1,15 @@
 .select {
+    width: 180px;
+    padding: 3px 10px;
+    margin-right: 110px;
 }
 
 .select:focus {
+}
+
+.option {
+    font-size: 14px;
+    line-height: 17px;
 }
 
 
