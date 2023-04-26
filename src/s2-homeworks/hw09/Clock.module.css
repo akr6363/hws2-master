@@ -1,7 +1,17 @@
 .buttonsContainer {
+    margin-top: 27px;
 }
 
-.clock {
+.buttonsContainer button:not(:last-child) {
+    margin-right: 20px;
+}
+.buttonsContainer button:disabled {
+    color: white;
+}
+.clock>div span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .watch {
@@ -11,4 +21,12 @@
 }
 
 .more {
+}
+.more span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 8px;
 }
