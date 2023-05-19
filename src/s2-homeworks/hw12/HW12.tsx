@@ -25,7 +25,7 @@ const HW12 = () => {
     const dispatch = useDispatch()
 
     const change = (id: number) => { // дописать функцию
-        dispatch(changeThemeId(id))
+        dispatch(changeThemeId(Number(id)))
     }
 
     useEffect(() => {
@@ -35,7 +35,7 @@ const HW12 = () => {
     return (
         <div id={'hw12'}>
             <div id={'hw12-text'} className={s2.hwTitle}>
-                Homework #12
+                Homework #122
             </div>
 
             <div className={s2.hw}>
