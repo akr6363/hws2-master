@@ -1,7 +1,12 @@
-.buttonsContainer {
+.buttonsContainer button {
+    margin-right: 20px;
+    margin-bottom: 40px;
 }
 
 .responseContainer {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .imageContainer {
@@ -14,9 +19,19 @@
 }
 
 .code {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 12px;
 }
 
 .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 }
 .info {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 }
