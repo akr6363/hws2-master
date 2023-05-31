@@ -3,5 +3,13 @@
 }
 
 .loading {
+    text-align: end;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4D4D4D;
+}
 
+.hw14 {
+    width: 50%;
 }

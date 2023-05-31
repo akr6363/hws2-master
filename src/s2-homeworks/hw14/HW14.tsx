@@ -21,39 +21,46 @@ const getTechs = (find: string) => {
         )
         .catch((e) => {
             alert(e.response?.data?.errorText || e.message)
+            throw e
         })
 }
 
 const HW14 = () => {
     const [find, setFind] = useState('')
-    const [isLoading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState(true)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<string[]>([])
-
+console.log(techs)
     const sendQuery = (value: string) => {
         setLoading(true)
         getTechs(value)
             .then((res) => {
                 // делает студент
-
+                setTechs(res.data.techs)
                 // сохранить пришедшие данные
-
+                setLoading(false)
                 //
+            })
+            .catch((e) => {
+                console.error(e) // обработка ошибки
             })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
         // добавить/заменить значение в квери урла
+        setSearchParams(value)
+
         // setSearchParams(
 
         //
     }
 
     useEffect(() => {
+
         const params = Object.fromEntries(searchParams)
+
         sendQuery(params.find || '')
         setFind(params.find || '')
     }, [])
@@ -68,7 +75,7 @@ const HW14 = () => {
         <div id={'hw14'}>
             <div className={s2.hwTitle}>Homework #14</div>
 
-            <div className={s2.hw}>
+            <div className={s2.hw} id={'hw14ww'}>
                 <SuperDebouncedInput
                     id={'hw14-super-debounced-input'}
                     value={find}
