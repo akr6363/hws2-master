@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {CircularProgress} from "@mui/material";
 
 /*
 * 1 - дописать SuperPagination
@@ -89,10 +90,14 @@ const HW15 = () => {
     }
 
     useEffect(() => {
-        const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
-        setPage(+params.page || 1)
-        setCount(+params.count || 4)
+        // const params = Object.fromEntries(searchParams)
+        // sendQuery({page: params.page, count: params.count})
+        // setPage(+params.page || 1)
+        // setCount(+params.count || 4)
+
+        sendQuery({page: page, count: count})
+        setPage(page)
+        setCount(count)
     }, [])
 
     const mappedTechs = techs.map(t => (
@@ -111,8 +116,10 @@ const HW15 = () => {
         <div id={'hw15'}>
             <div className={s2.hwTitle}>Homework #15</div>
 
-            <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+            <div className={s2.hw} style={{position: "relative", width: '745', boxSizing: 'border-box'}} >
+                {idLoading && <div id={'hw15-loading'} className={s.loading}>
+                    <CircularProgress />
+                </div>}
 
                 <SuperPagination
                     page={page}
@@ -134,6 +141,7 @@ const HW15 = () => {
                 </div>
 
                 {mappedTechs}
+
             </div>
         </div>
     )

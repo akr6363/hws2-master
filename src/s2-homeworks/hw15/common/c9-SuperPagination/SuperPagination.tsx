@@ -1,6 +1,6 @@
 import React from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
-import {Pagination} from '@mui/material'
+import {makeStyles, Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
 
 export type SuperPaginationPropsType = {
@@ -27,12 +27,26 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         onChange(page, event)
     }
 
+    const stylesForSelect = {
+        width: '49px',
+        fontSize: '14px',
+        padding: '0px 3px',
+        marginLeft: '10px',
+        marginRight: '10px',
+    }
+
     return (
         <div className={s.pagination}>
             <Pagination
                 id={id + '-pagination'}
                 sx={{
-                    // стили для Pagination // пишет студент
+                    '& .Mui-selected': {
+                        backgroundColor: '#0066CC !important',
+                        borderRadius: '2px',
+                        color: 'white',
+                        fontSize: '14px',
+                    },
+
                 }}
                 page={page}
                 count={lastPage}
@@ -42,7 +56,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             />
 
             <span className={s.text1}>
-                показать
+                Показать
             </span>
 
             <SuperSelect
@@ -54,6 +68,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                     {id: 10, value: 10},
                 ]}
                 onChangeOption={onChangeSelect}
+                styles={stylesForSelect}
             />
 
             <span className={s.text2}>
